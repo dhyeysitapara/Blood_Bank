@@ -14,7 +14,7 @@ namespace Blood_Bank
     public partial class Donor : Form
     {
         SqlConnection con;
-        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JAY\source\repos\Blood_Bank\BloodBankDB.mdf;Integrated Security=True";
+        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Hp\Documents\bloodbankdb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
         public Donor()
         {
@@ -33,7 +33,7 @@ namespace Blood_Bank
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO DonorTBL (DName, DAge, DGender, DPhone, DAddress, DBGroup) " +
+            string query = "INSERT INTO DonorTable (DName, DAge, DGender, DPhone, DAddress, DBGroup) " +
                           "VALUES (@DName, @DAge, @DGender, @DPhone, @DAddress, @DBGroup)";
 
             

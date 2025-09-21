@@ -13,7 +13,7 @@ namespace Blood_Bank
 {
     public partial class BloodTransfert : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JAY\source\repos\Blood_Bank\BloodBankDB.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Hp\Documents\bloodbankdb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
         public BloodTransfert()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Blood_Bank
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT PNum FROM PatientTBL", con);
+                SqlCommand cmd = new SqlCommand("SELECT PNum FROM PatientTable", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Pnum", typeof(string));
@@ -53,7 +53,7 @@ namespace Blood_Bank
             try
             {
                 con.Open();
-                string query = "SELECT * FROM PatientTBL WHERE PNum = @PNum";
+                string query = "SELECT * FROM PatientTable WHERE PNum = @PNum";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@PNum", PIdCb.SelectedValue.ToString());
 
@@ -87,7 +87,7 @@ namespace Blood_Bank
             try
             {
                 con.Open();
-                string query = "SELECT * FROM BloodTBL WHERE BGroup = @BGroup";
+                string query = "SELECT * FROM BloodTable WHERE BGroup = @BGroup";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@BGroup", bloodGroup);
 

@@ -79,7 +79,7 @@ namespace Blood_Bank
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 536);
             this.panel1.TabIndex = 6;
@@ -193,7 +193,7 @@ namespace Blood_Bank
             // 
             this.panel4.BackColor = System.Drawing.Color.IndianRed;
             this.panel4.Location = new System.Drawing.Point(15, 94);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(9, 38);
             this.panel4.TabIndex = 4;
@@ -233,7 +233,7 @@ namespace Blood_Bank
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(188, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(599, 50);
             this.panel2.TabIndex = 7;
@@ -245,7 +245,7 @@ namespace Blood_Bank
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(207, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 40);
             this.button1.TabIndex = 45;
@@ -257,7 +257,7 @@ namespace Blood_Bank
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(249, -148);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -278,7 +278,7 @@ namespace Blood_Bank
             "O+",
             "O-"});
             this.comboBox2.Location = new System.Drawing.Point(249, 93);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(108, 21);
             this.comboBox2.TabIndex = 43;
@@ -291,7 +291,7 @@ namespace Blood_Bank
             "Male",
             "Female"});
             this.comboBox1.Location = new System.Drawing.Point(398, -24);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(116, 21);
             this.comboBox1.TabIndex = 42;
@@ -301,7 +301,7 @@ namespace Blood_Bank
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox4.Location = new System.Drawing.Point(426, 93);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(126, 45);
@@ -312,7 +312,7 @@ namespace Blood_Bank
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox3.Location = new System.Drawing.Point(52, 93);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(126, 20);
             this.textBox3.TabIndex = 40;
@@ -322,7 +322,7 @@ namespace Blood_Bank
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox2.Location = new System.Drawing.Point(231, -21);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(126, 20);
             this.textBox2.TabIndex = 39;
@@ -332,7 +332,7 @@ namespace Blood_Bank
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox1.Location = new System.Drawing.Point(52, -22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(126, 20);
             this.textBox1.TabIndex = 38;
@@ -472,9 +472,10 @@ namespace Blood_Bank
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

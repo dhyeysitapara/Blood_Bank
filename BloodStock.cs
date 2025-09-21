@@ -14,7 +14,7 @@ namespace Blood_Bank
     public partial class BloodStock : Form
     {
         SqlConnection con;
-        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JAY\source\repos\Blood_Bank\BloodBankDB.mdf;Integrated Security=True";
+        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Hp\Documents\bloodbankdb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
         public BloodStock()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Blood_Bank
         void displayData()
         {
             dataGridView1.Rows.Clear();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM BloodTbl", con);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM BloodTable", con);
             DataSet ds = new DataSet();
             da.Fill(ds, "BloodTbl");
 
@@ -34,7 +34,7 @@ namespace Blood_Bank
             try
             {
                 con.Open();
-                string query = "SELECT Stock FROM BloodTBL WHERE BGroup = @BGroup";
+                string query = "SELECT Stock FROM BloodTable WHERE BGroup = @BGroup";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@BGroup", bloodGroup);
 
@@ -137,6 +137,11 @@ namespace Blood_Bank
         private void button2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void BGroup_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Blood_Bank
     public partial class Donate : Form
     {
         SqlConnection con;
-        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JAY\source\repos\Blood_Bank\BloodBankDB.mdf;Integrated Security=True";
+        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Hp\Documents\bloodbankdb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
         public Donate()
         {
@@ -24,11 +24,11 @@ namespace Blood_Bank
         void displayData()
         {
             dataGridView1.Rows.Clear();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM DonorTBL", con);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM DonorTable", con);
             DataSet ds = new DataSet();
-            da.Fill(ds, "DonorTBL");
+            da.Fill(ds, "DonorTable");
 
-            dataGridView1.DataSource = ds.Tables["DonorTBL"];
+            dataGridView1.DataSource = ds.Tables["DonorTable"];
         }
 
       /*  void blood()

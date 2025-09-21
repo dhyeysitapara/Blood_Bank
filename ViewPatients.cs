@@ -14,7 +14,7 @@ namespace Blood_Bank
     public partial class ViewPatients : Form
     {
         SqlConnection con;
-        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JAY\source\repos\Blood_Bank\BloodBankDB.mdf;Integrated Security=True";
+        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Hp\Documents\bloodbankdb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
         private int Key = 0;
         public ViewPatients()
         {
@@ -25,7 +25,7 @@ namespace Blood_Bank
         void displayData()
         {
             dataGridView1.Rows.Clear();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM PatientTBL", con);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM PatientTable", con);
             DataSet ds = new DataSet();
             da.Fill(ds, "PatientTBL");
 
@@ -59,7 +59,7 @@ namespace Blood_Bank
                 try
                 {
                     
-                    String q = "UPDATE PatientTBL SET PName = @PName, PAge = @PAge, PPhone = @PPhone, PGender = @PGender, PBGroup = @PBGroup, PAddress = @PAddress WHERE PNum = @PNum";
+                    String q = "UPDATE PatientTable SET PName = @PName, PAge = @PAge, PPhone = @PPhone, PGender = @PGender, PBGroup = @PBGroup, PAddress = @PAddress WHERE PNum = @PNum";
 
                     con.Open();
                     SqlCommand cmd = new SqlCommand(q, con);

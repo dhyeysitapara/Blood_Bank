@@ -177,5 +177,10 @@ namespace Blood_Bank
         {
 
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

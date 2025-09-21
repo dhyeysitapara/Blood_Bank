@@ -14,7 +14,7 @@ namespace Blood_Bank
     public partial class Patient : Form
     {
         SqlConnection con;
-        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JAY\source\repos\Blood_Bank\BloodBankDB.mdf;Integrated Security=True";
+        private string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Hp\Documents\bloodbankdb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
         public Patient()
         {
@@ -33,7 +33,7 @@ namespace Blood_Bank
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO PatientTBL (PName, PAge, PGender, PPhone, PAddress, PBGroup) " +
+            string query = "INSERT INTO PatientTable (PName, PAge, PGender, PPhone, PAddress, PBGroup) " +
                          "VALUES (@PName, @PAge, @PGender, @PPhone, @PAddress, @PBGroup)";
 
 
@@ -119,6 +119,16 @@ namespace Blood_Bank
             Donate d = new Donate();
             d.Show();
             this.Hide();
+        }
+
+        private void PNameTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Patient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
