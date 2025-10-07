@@ -199,5 +199,12 @@ namespace Blood_Bank
         {
 
         }
+
+        private void Avilbletbl_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
     }
 }
